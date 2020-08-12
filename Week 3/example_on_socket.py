@@ -12,8 +12,8 @@ mysock.send(cmd)
 while True:
     data = mysock.recv(512)
     # we will receive upto 512 characters at a time
-    if (len(data) < 1):
+    if len(data) < 1:
         break
-    print(data.decode()) # received data will be in UTF8 format which we will be converting to unicode using decode()
+    print(data.decode())  # received data will be in UTF8 format which we will be converting to unicode using decode()
 mysock.close()
 
